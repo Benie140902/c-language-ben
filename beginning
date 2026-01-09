@@ -19,6 +19,7 @@ cmd
 sudo apt update
 sudo apt install -y gcc-riscv64-unknown-elf qemu-system-misc gdb-multiarch // install packages
 riscv64-unknown-elf-gcc -o0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld m.s -o main.elf // compile c / ld / asm files
+riscv64-unknown-elf-objcopy -O binary main.elf main.bin
 qemu-system-riscv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp:1234 // start qemu riscv32 cpu
 gdb-multiarch main.elf -ex "target remote" localhost:1234 -ex "break _start" -ex "continue" -q // allocate break point in progam using gdb cmd 
 xxd -e -c 4 -g 4 main.bin
