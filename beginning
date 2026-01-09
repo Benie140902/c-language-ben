@@ -1,0 +1,20 @@
+m.s
+_start:
+    j _start 
+
+m.ld
+MEMORY
+{
+    RAM :ORIGIN = 0X80000000, LENGTH = 4K  
+}
+
+SECTIONS
+{
+    .text : {
+        *(.text*)
+    } >RAM
+}
+
+cmd
+
+qemu-system-riscv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp:1234
