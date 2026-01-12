@@ -45,5 +45,5 @@ pip install pygments // package needed for ui in python
 Tools
 rsicv encoder:https://luplab.gitlab.io/rvcodecjs/
 gdb ui:https://github.com/cyrus-and/gdb-dashboard
-gnu :https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_node/as_toc.html
-gcc:https://www.open-std.org/jtc1/sc22/wg14/
+gnu :https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_node/as_toc.html or https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html
+gcc:https:https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf
